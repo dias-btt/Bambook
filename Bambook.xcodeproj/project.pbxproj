@@ -10,9 +10,23 @@
 		F57CF6C72B4EAFFD0056FBF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57CF6C62B4EAFFD0056FBF0 /* AppDelegate.swift */; };
 		F57CF6C92B4EAFFD0056FBF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57CF6C82B4EAFFD0056FBF0 /* SceneDelegate.swift */; };
 		F57CF6CB2B4EAFFD0056FBF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57CF6CA2B4EAFFD0056FBF0 /* ViewController.swift */; };
-		F57CF6CE2B4EAFFD0056FBF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F57CF6CC2B4EAFFD0056FBF0 /* Main.storyboard */; };
 		F57CF6D02B4EB0000056FBF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F57CF6CF2B4EB0000056FBF0 /* Assets.xcassets */; };
 		F57CF6D32B4EB0000056FBF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F57CF6D12B4EB0000056FBF0 /* LaunchScreen.storyboard */; };
+		F57CF6DC2B4EC08B0056FBF0 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57CF6DB2B4EC08B0056FBF0 /* MainTabBarController.swift */; };
+		F57CF6DE2B4EC40D0056FBF0 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57CF6DD2B4EC40D0056FBF0 /* TabBarRouter.swift */; };
+		F57CF6E22B4EC4610056FBF0 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57CF6E12B4EC4610056FBF0 /* ProfileRouter.swift */; };
+		F57CF7082B4EC7860056FBF0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57CF7072B4EC7860056FBF0 /* ProfileViewController.swift */; };
+		F57CF70A2B4EC7D40056FBF0 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57CF7092B4EC7D40056FBF0 /* ProfilePresenter.swift */; };
+		F57CF70C2B4EC8180056FBF0 /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57CF70B2B4EC8180056FBF0 /* ProfileProtocols.swift */; };
+		F57CF70E2B4EC9780056FBF0 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57CF70D2B4EC9780056FBF0 /* ProfileInteractor.swift */; };
+		F5E971672B4FE40E00B27F42 /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E971662B4FE40E00B27F42 /* ProfileEntity.swift */; };
+		F5E9716A2B4FE73D00B27F42 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F5E971692B4FE73D00B27F42 /* SnapKit */; };
+		F5E9716D2B4FEBD400B27F42 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E9716C2B4FEBD400B27F42 /* FeedViewController.swift */; };
+		F5E9716F2B4FEBDD00B27F42 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E9716E2B4FEBDD00B27F42 /* FeedPresenter.swift */; };
+		F5E971712B4FEBE600B27F42 /* FeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E971702B4FEBE600B27F42 /* FeedInteractor.swift */; };
+		F5E971732B4FEBEF00B27F42 /* FeedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E971722B4FEBEF00B27F42 /* FeedEntity.swift */; };
+		F5E971752B4FEBF500B27F42 /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E971742B4FEBF500B27F42 /* FeedRouter.swift */; };
+		F5E971772B4FEBFD00B27F42 /* FeedProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E971762B4FEBFD00B27F42 /* FeedProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +34,23 @@
 		F57CF6C62B4EAFFD0056FBF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F57CF6C82B4EAFFD0056FBF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F57CF6CA2B4EAFFD0056FBF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F57CF6CD2B4EAFFD0056FBF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F57CF6CF2B4EB0000056FBF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F57CF6D22B4EB0000056FBF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F57CF6D42B4EB0000056FBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F57CF6DB2B4EC08B0056FBF0 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		F57CF6DD2B4EC40D0056FBF0 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
+		F57CF6E12B4EC4610056FBF0 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		F57CF7072B4EC7860056FBF0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F57CF7092B4EC7D40056FBF0 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		F57CF70B2B4EC8180056FBF0 /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
+		F57CF70D2B4EC9780056FBF0 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		F5E971662B4FE40E00B27F42 /* ProfileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEntity.swift; sourceTree = "<group>"; };
+		F5E9716C2B4FEBD400B27F42 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		F5E9716E2B4FEBDD00B27F42 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		F5E971702B4FEBE600B27F42 /* FeedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInteractor.swift; sourceTree = "<group>"; };
+		F5E971722B4FEBEF00B27F42 /* FeedEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEntity.swift; sourceTree = "<group>"; };
+		F5E971742B4FEBF500B27F42 /* FeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRouter.swift; sourceTree = "<group>"; };
+		F5E971762B4FEBFD00B27F42 /* FeedProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5E9716A2B4FE73D00B27F42 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +84,52 @@
 		F57CF6C52B4EAFFD0056FBF0 /* Bambook */ = {
 			isa = PBXGroup;
 			children = (
+				F5E9716B2B4FEBC800B27F42 /* FeedModule */,
+				F57CF6E02B4EC4540056FBF0 /* ProfileModule */,
+				F57CF6DA2B4EC05D0056FBF0 /* TabBar */,
 				F57CF6C62B4EAFFD0056FBF0 /* AppDelegate.swift */,
 				F57CF6C82B4EAFFD0056FBF0 /* SceneDelegate.swift */,
 				F57CF6CA2B4EAFFD0056FBF0 /* ViewController.swift */,
-				F57CF6CC2B4EAFFD0056FBF0 /* Main.storyboard */,
 				F57CF6CF2B4EB0000056FBF0 /* Assets.xcassets */,
 				F57CF6D12B4EB0000056FBF0 /* LaunchScreen.storyboard */,
 				F57CF6D42B4EB0000056FBF0 /* Info.plist */,
 			);
 			path = Bambook;
+			sourceTree = "<group>";
+		};
+		F57CF6DA2B4EC05D0056FBF0 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				F57CF6DB2B4EC08B0056FBF0 /* MainTabBarController.swift */,
+				F57CF6DD2B4EC40D0056FBF0 /* TabBarRouter.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		F57CF6E02B4EC4540056FBF0 /* ProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				F57CF7072B4EC7860056FBF0 /* ProfileViewController.swift */,
+				F57CF6E12B4EC4610056FBF0 /* ProfileRouter.swift */,
+				F57CF7092B4EC7D40056FBF0 /* ProfilePresenter.swift */,
+				F57CF70B2B4EC8180056FBF0 /* ProfileProtocols.swift */,
+				F57CF70D2B4EC9780056FBF0 /* ProfileInteractor.swift */,
+				F5E971662B4FE40E00B27F42 /* ProfileEntity.swift */,
+			);
+			path = ProfileModule;
+			sourceTree = "<group>";
+		};
+		F5E9716B2B4FEBC800B27F42 /* FeedModule */ = {
+			isa = PBXGroup;
+			children = (
+				F5E9716C2B4FEBD400B27F42 /* FeedViewController.swift */,
+				F5E9716E2B4FEBDD00B27F42 /* FeedPresenter.swift */,
+				F5E971702B4FEBE600B27F42 /* FeedInteractor.swift */,
+				F5E971722B4FEBEF00B27F42 /* FeedEntity.swift */,
+				F5E971742B4FEBF500B27F42 /* FeedRouter.swift */,
+				F5E971762B4FEBFD00B27F42 /* FeedProtocols.swift */,
+			);
+			path = FeedModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +148,9 @@
 			dependencies = (
 			);
 			name = Bambook;
+			packageProductDependencies = (
+				F5E971692B4FE73D00B27F42 /* SnapKit */,
+			);
 			productName = Bambook;
 			productReference = F57CF6C32B4EAFFD0056FBF0 /* Bambook.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +179,9 @@
 				Base,
 			);
 			mainGroup = F57CF6BA2B4EAFFD0056FBF0;
+			packageReferences = (
+				F5E971682B4FE73D00B27F42 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = F57CF6C42B4EAFFD0056FBF0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +198,6 @@
 			files = (
 				F57CF6D32B4EB0000056FBF0 /* LaunchScreen.storyboard in Resources */,
 				F57CF6D02B4EB0000056FBF0 /* Assets.xcassets in Resources */,
-				F57CF6CE2B4EAFFD0056FBF0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +208,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5E971772B4FEBFD00B27F42 /* FeedProtocols.swift in Sources */,
+				F5E971752B4FEBF500B27F42 /* FeedRouter.swift in Sources */,
+				F5E9716F2B4FEBDD00B27F42 /* FeedPresenter.swift in Sources */,
+				F57CF6E22B4EC4610056FBF0 /* ProfileRouter.swift in Sources */,
 				F57CF6CB2B4EAFFD0056FBF0 /* ViewController.swift in Sources */,
+				F57CF70E2B4EC9780056FBF0 /* ProfileInteractor.swift in Sources */,
+				F57CF70A2B4EC7D40056FBF0 /* ProfilePresenter.swift in Sources */,
 				F57CF6C72B4EAFFD0056FBF0 /* AppDelegate.swift in Sources */,
+				F5E971732B4FEBEF00B27F42 /* FeedEntity.swift in Sources */,
+				F57CF70C2B4EC8180056FBF0 /* ProfileProtocols.swift in Sources */,
+				F57CF6DC2B4EC08B0056FBF0 /* MainTabBarController.swift in Sources */,
+				F57CF7082B4EC7860056FBF0 /* ProfileViewController.swift in Sources */,
 				F57CF6C92B4EAFFD0056FBF0 /* SceneDelegate.swift in Sources */,
+				F5E971712B4FEBE600B27F42 /* FeedInteractor.swift in Sources */,
+				F5E971672B4FE40E00B27F42 /* ProfileEntity.swift in Sources */,
+				F5E9716D2B4FEBD400B27F42 /* FeedViewController.swift in Sources */,
+				F57CF6DE2B4EC40D0056FBF0 /* TabBarRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F57CF6CC2B4EAFFD0056FBF0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F57CF6CD2B4EAFFD0056FBF0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F57CF6D12B4EB0000056FBF0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,7 +367,6 @@
 				INFOPLIST_FILE = Bambook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,7 +393,6 @@
 				INFOPLIST_FILE = Bambook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -356,6 +430,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F5E971682B4FE73D00B27F42 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F5E971692B4FE73D00B27F42 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5E971682B4FE73D00B27F42 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F57CF6BB2B4EAFFD0056FBF0 /* Project object */;
 }
