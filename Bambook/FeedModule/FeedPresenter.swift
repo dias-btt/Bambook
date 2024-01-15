@@ -23,6 +23,5 @@ final class FeedPresenter: FeedPresenterProtocol {
     }
 
     func feedDataFetched(_ feedEntity: FeedEntity) {
-        view?.displayFeedData(feedEntity)
     }
 }

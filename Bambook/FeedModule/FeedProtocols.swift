@@ -12,7 +12,6 @@ public protocol FeedWireframeProtocol: AnyObject {
 
 protocol FeedViewProtocol: AnyObject {
     var presenter: FeedPresenterProtocol? { get set }
-    func displayFeedData(_ feedEntity: FeedEntity)
 }
 
 protocol FeedInteractorProtocol: AnyObject {
