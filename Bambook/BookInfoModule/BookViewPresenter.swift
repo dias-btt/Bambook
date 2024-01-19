@@ -13,16 +13,18 @@ class BookInfoPresenter: BookInfoPresenterProtocol {
     var router: BookInfoWireframeProtocol?
     var title: String
     var description: String
+    var imageURL: String
 
-    init(view: BookInfoViewProtocol, interactor: BookInfoInteractorProtocol, router: BookInfoWireframeProtocol, title: String, description: String) {
+    init(view: BookInfoViewProtocol, interactor: BookInfoInteractorProtocol, router: BookInfoWireframeProtocol, title: String, description: String, imageURL: String) {
         self.view = view
         self.interactor = interactor
         self.router = router
         self.title = title
         self.description = description
+        self.imageURL = imageURL
     }
     
     func viewDidLoad(){
-        view?.displayBookInfo(title: title, description: description)
+        view?.displayBookInfo(title: title, description: description, imageURL: imageURL)
     }
 }

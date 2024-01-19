@@ -27,11 +27,11 @@ public class FeedRouter: FeedWireframeProtocol {
         return view
     }
     
-    public func navigateToBookInfo(with title: String, description: String) {
+    public func navigateToBookInfo(with title: String, description: String, imageURL: String) {
         guard let navigationController = viewController?.navigationController else {
             return
         }
-        let bookInfoModule = BookInfoRouter.createModule(title: title, description: description)
+        let bookInfoModule = BookInfoRouter.createModule(title: title, description: description, imageURL: imageURL)
         navigationController.pushViewController(bookInfoModule, animated: true)
     }
 }

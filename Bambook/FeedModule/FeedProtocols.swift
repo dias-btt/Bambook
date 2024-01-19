@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol FeedWireframeProtocol: AnyObject {
-    func navigateToBookInfo(with title: String, description: String)
+    func navigateToBookInfo(with title: String, description: String, imageURL: String)
 }
 
 protocol CollectionViewProtocol: AnyObject {

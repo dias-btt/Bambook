@@ -11,7 +11,7 @@ class BookInfoRouter: BookInfoWireframeProtocol {
 
     weak var viewController: UIViewController?
 
-    public static func createModule(title: String, description: String) -> UIViewController {
+    public static func createModule(title: String, description: String, imageURL: String) -> UIViewController {
         let view = BookInfoViewController()
         let interactor = BookInfoInteractor()
         let router = BookInfoRouter()
@@ -20,7 +20,8 @@ class BookInfoRouter: BookInfoWireframeProtocol {
             interactor: interactor,
             router: router,
             title: title,
-            description: description
+            description: description,
+            imageURL: imageURL
         )
 
         view.presenter = presenter

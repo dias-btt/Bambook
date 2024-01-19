@@ -36,7 +36,7 @@ final class FeedPresenter: FeedPresenterProtocol {
     }
     
     func didSelectTitleSection(book: BookData) {
-        router?.navigateToBookInfo(with: book.title, description: book.description)
+        router?.navigateToBookInfo(with: book.title, description: book.description, imageURL: book.thumbnail)
     }
 
 }
