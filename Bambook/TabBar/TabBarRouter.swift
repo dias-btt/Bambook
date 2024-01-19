@@ -25,15 +25,15 @@ class TabBarRouter: TabBarRouterProtocol {
         let feedVC = FeedRouter.createModule()
 
         profileVC.tabBarItem = UITabBarItem(
-            title: "Профиль",
+            title: "Profile",
             image: UIImage(systemName: "person.circle.fill"),
-            tag: 4
+            tag: 1
         )
         
         feedVC.tabBarItem = UITabBarItem(
-            title: "Главная",
-            image: UIImage(systemName: "person.circle.fill"),
-            tag: 4
+            title: "Home",
+            image: UIImage(systemName: "house.fill"),
+            tag: 0
         )
 
         let controllers = [feedVC, profileVC]

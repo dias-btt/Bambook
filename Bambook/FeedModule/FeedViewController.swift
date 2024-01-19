@@ -8,8 +8,17 @@
 import UIKit
 import SnapKit
 
+enum Sections: Int {
+    case ForYou = 0
+    case Popular = 1
+    case Trending = 2
+    case TopRated = 3
+}
+
 final class FeedViewController: UIViewController, FeedViewProtocol {
     var presenter: FeedPresenterProtocol?
+    var books: [BookData]?
+    let sectionTitles: [String] = ["For you", "Popular", "Trending", "Top rated"]
     
     private let homeFeedTable: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
@@ -26,7 +35,23 @@ final class FeedViewController: UIViewController, FeedViewProtocol {
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
         
-        homeFeedTable.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 400))
+        configureNavBar()
+        
+        let headerView = HeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 400))
+        homeFeedTable.tableHeaderView = headerView
+        
+    }
+    
+    func reloadData() {
+        homeFeedTable.reloadData()
+    }
+
+    
+    private func configureNavBar(){
+        let image = UIImage(named: "bambook_logo")
+        //image = image?.withRenderingMode(.alwaysOriginal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
+        navigationController?.navigationBar.tintColor = .white
     }
     
     override func viewDidLayoutSubviews() {
@@ -38,7 +63,7 @@ final class FeedViewController: UIViewController, FeedViewProtocol {
 
 extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 20
+        return sectionTitles.count
     }
         
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,6 +74,20 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else {
                     return UITableViewCell()
         }
+        cell.presenter = presenter
+        switch indexPath.section{
+        case Sections.ForYou.rawValue:
+            cell.configure(with: presenter?.getPopularBooks() ?? [])
+        case Sections.Popular.rawValue:
+            cell.configure(with: presenter?.getPopularBooks() ?? [])
+        case Sections.Trending.rawValue:
+            cell.configure(with: presenter?.getPopularBooks() ?? [])
+        case Sections.TopRated.rawValue:
+            cell.configure(with: presenter?.getPopularBooks() ?? [])
+        default:
+            return UITableViewCell()
+        }
+        
         return cell
     }
     
@@ -59,4 +98,27 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let defaultOffset = view.safeAreaInsets.top
+        let offset = scrollView.contentOffset.y + defaultOffset
+        
+        navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else {
+            return
+        }
+        
+        header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
+        header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
+        header.textLabel?.textColor = .white
+        header.textLabel?.text = header.textLabel?.text?.lowercased()
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionTitles[section]
+    }
+
 }

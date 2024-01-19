@@ -8,17 +8,26 @@
 import Foundation
 
 public protocol FeedWireframeProtocol: AnyObject {
+    func navigateToBookInfo(with title: String, description: String)
+}
+
+protocol CollectionViewProtocol: AnyObject {
+    var presenter: FeedPresenterProtocol? { get set }
 }
 
 protocol FeedViewProtocol: AnyObject {
     var presenter: FeedPresenterProtocol? { get set }
+    var books: [BookData]? {get set}
+    func reloadData()
 }
 
 protocol FeedInteractorProtocol: AnyObject {
     var presenter: FeedPresenterProtocol? { get set }
-    func fetchFeedData()
+    func fetchFeedData(completion: @escaping (Data?) -> Void)
+    func parseBooks(jsonData: Data) -> [BookData]?
 }
 protocol FeedPresenterProtocol: AnyObject {
     func viewDidLoad()
-    func feedDataFetched(_ feedEntity: FeedEntity)
+    func getPopularBooks() -> [BookData]
+    func didSelectTitleSection(book: BookData)
 }
