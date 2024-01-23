@@ -77,7 +77,7 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         cell.presenter = presenter
         switch indexPath.section{
         case Sections.ForYou.rawValue:
-            cell.configure(with: presenter?.getPopularBooks() ?? [])
+            cell.configure(with: presenter?.getRecommendationBooks() ?? [])
         case Sections.Popular.rawValue:
             cell.configure(with: presenter?.getPopularBooks() ?? [])
         case Sections.Trending.rawValue:

@@ -20,11 +20,11 @@ final class FeedPresenter: FeedPresenterProtocol {
     }
 
     func viewDidLoad() {
-        interactor?.fetchFeedData(completion: { [weak self] jsonData in
-            guard let jsonData = jsonData else {
+        interactor?.fetchFeedData(forUser: MockUser.MOCK_USERS[0], completion: { [weak self] books in
+            guard let books = books else {
                 return
             }
-            self?.books = self?.interactor?.parseBooks(jsonData: jsonData) ?? []
+            self?.books = books
             self?.view?.reloadData()
         })
     }
@@ -35,8 +35,16 @@ final class FeedPresenter: FeedPresenterProtocol {
         return top10Books
     }
     
-    func didSelectTitleSection(book: BookData) {
-        router?.navigateToBookInfo(with: book.title, description: book.description, imageURL: book.thumbnail)
+    func getRecommendationBooks() -> [BookData]{
+        return [
+            BookData(title: "Rec1", authors: ["DS"], averageRating: 4.0, ratingsCount: 200, thumbnail: "", description: ""),
+            BookData(title: "Rec2", authors: ["DS"], averageRating: 4.0, ratingsCount: 200, thumbnail: "", description: ""),
+            BookData(title: "Rec3", authors: ["DS"], averageRating: 4.0, ratingsCount: 200, thumbnail: "", description: ""),
+            BookData(title: "Rec4", authors: ["DS"], averageRating: 4.0, ratingsCount: 200, thumbnail: "", description: ""),
+        ]
     }
-
+    
+    func didSelectTitleSection(book: BookData) {
+        router?.navigateToBookInfo(book: book)
+    }
 }

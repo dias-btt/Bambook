@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol FeedWireframeProtocol: AnyObject {
-    func navigateToBookInfo(with title: String, description: String, imageURL: String)
+    func navigateToBookInfo(book: BookData)
 }
 
 protocol CollectionViewProtocol: AnyObject {
@@ -23,11 +23,13 @@ protocol FeedViewProtocol: AnyObject {
 
 protocol FeedInteractorProtocol: AnyObject {
     var presenter: FeedPresenterProtocol? { get set }
-    func fetchFeedData(completion: @escaping (Data?) -> Void)
+    func fetchFeedData(forUser user: MockUser, completion: @escaping ([BookData]?) -> Void)
+    func fetchBooks(forQuery query: String, completion: @escaping (Data?) -> Void)
     func parseBooks(jsonData: Data) -> [BookData]?
 }
 protocol FeedPresenterProtocol: AnyObject {
     func viewDidLoad()
     func getPopularBooks() -> [BookData]
+    func getRecommendationBooks() -> [BookData]
     func didSelectTitleSection(book: BookData)
 }

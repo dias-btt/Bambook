@@ -12,7 +12,7 @@ public protocol BookInfoWireframeProtocol: AnyObject {
 
 protocol BookInfoViewProtocol: AnyObject {
     var presenter: BookInfoPresenterProtocol? { get set }
-    func displayBookInfo(title: String, description: String, imageURL: String)
+    func displayBookInfo(book: BookData)
 }
 
 protocol BookInfoInteractorProtocol: AnyObject {

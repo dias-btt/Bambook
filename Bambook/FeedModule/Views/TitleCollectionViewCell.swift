@@ -33,7 +33,10 @@ class TitleCollectionViewCell: UICollectionViewCell {
     }
     
     public func configure(with model: String){
-        guard let url = URL(string: model) else {return}
+        guard let url = URL(string: model) else {
+            posterImageView.image = UIImage(named: "placeholder")
+            return
+        }
         posterImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder"), completed: nil)
     }
 }

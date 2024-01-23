@@ -51,16 +51,48 @@ extension FeedInteractor: FeedInteractorProtocol{
         }
     }
 
-    
-    func fetchFeedData(completion: @escaping (Data?) -> Void) {
-            AF.request("https://www.googleapis.com/books/v1/volumes?q=harry+potter").responseData { response in
+    func fetchFeedData(forUser user: MockUser, completion: @escaping ([BookData]?) -> Void) {
+        let dispatchGroup = DispatchGroup()
+        var fetchedBooks: [BookData] = []
+
+        for bookName in user.readBooks {
+            dispatchGroup.enter()
+
+            fetchBooks(forQuery: bookName) { [weak self] jsonData in
+                defer {
+                    dispatchGroup.leave()
+                }
+
+                if let jsonData = jsonData,
+                   let books = self?.parseBooks(jsonData: jsonData) {
+                    fetchedBooks.append(contentsOf: books)
+                }
+            }
+        }
+
+        dispatchGroup.notify(queue: .main) {
+            completion(fetchedBooks)
+        }
+    }
+
+    internal func fetchBooks(forQuery query: String, completion: @escaping (Data?) -> Void) {
+        if let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+            let urlString = "https://www.googleapis.com/books/v1/volumes?q=\(encodedQuery)"
+
+            AF.request(urlString).responseData { response in
                 switch response.result {
                 case .success(let data):
                     completion(data)
                 case .failure(let error):
-                    print("Error fetching data: \(error)")
+                    print("Error fetching data for query '\(query)': \(error)")
                     completion(nil)
                 }
             }
+        } else {
+            print("Error encoding query '\(query)'")
+            completion(nil)
         }
+    }
+
+
 }

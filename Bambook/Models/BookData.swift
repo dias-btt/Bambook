@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BookData {
+public struct BookData {
     let title: String
     let authors: [String]
     let averageRating: Double

@@ -33,6 +33,8 @@
 		F5E971732B4FEBEF00B27F42 /* FeedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E971722B4FEBEF00B27F42 /* FeedEntity.swift */; };
 		F5E971752B4FEBF500B27F42 /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E971742B4FEBF500B27F42 /* FeedRouter.swift */; };
 		F5E971772B4FEBFD00B27F42 /* FeedProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E971762B4FEBFD00B27F42 /* FeedProtocols.swift */; };
+		F5EEFB652B5FAD7200F12878 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EEFB642B5FAD7200F12878 /* StarRatingView.swift */; };
+		F5EEFB672B5FB11600F12878 /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EEFB662B5FB11600F12878 /* MockUser.swift */; };
 		F5F002702B59244200C57DD2 /* BookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F0026F2B59244200C57DD2 /* BookData.swift */; };
 		F5F002732B5925AE00C57DD2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F5F002722B5925AE00C57DD2 /* Alamofire */; };
 		F5F002752B5927AF00C57DD2 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F002742B5927AF00C57DD2 /* TitleCollectionViewCell.swift */; };
@@ -68,6 +70,8 @@
 		F5E971722B4FEBEF00B27F42 /* FeedEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEntity.swift; sourceTree = "<group>"; };
 		F5E971742B4FEBF500B27F42 /* FeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRouter.swift; sourceTree = "<group>"; };
 		F5E971762B4FEBFD00B27F42 /* FeedProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedProtocols.swift; sourceTree = "<group>"; };
+		F5EEFB642B5FAD7200F12878 /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
+		F5EEFB662B5FB11600F12878 /* MockUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUser.swift; sourceTree = "<group>"; };
 		F5F0026F2B59244200C57DD2 /* BookData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookData.swift; sourceTree = "<group>"; };
 		F5F002742B5927AF00C57DD2 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +94,7 @@
 		F5639D912B5A6BE8007B1422 /* BookInfoModule */ = {
 			isa = PBXGroup;
 			children = (
+				F5EEFB632B5FAD6A00F12878 /* Views */,
 				F5639D922B5A6BF7007B1422 /* BookInfoViewController.swift */,
 				F5639D942B5A6C0E007B1422 /* BookViewPresenter.swift */,
 				F5639D962B5A6C22007B1422 /* BookInfoInteractor.swift */,
@@ -128,6 +133,7 @@
 		F57CF6C52B4EAFFD0056FBF0 /* Bambook */ = {
 			isa = PBXGroup;
 			children = (
+				F5F0026E2B59243800C57DD2 /* Models */,
 				F5639D912B5A6BE8007B1422 /* BookInfoModule */,
 				F5E9716B2B4FEBC800B27F42 /* FeedModule */,
 				F57CF6E02B4EC4540056FBF0 /* ProfileModule */,
@@ -166,7 +172,6 @@
 		F5E9716B2B4FEBC800B27F42 /* FeedModule */ = {
 			isa = PBXGroup;
 			children = (
-				F5F0026E2B59243800C57DD2 /* Models */,
 				F5710B212B5544790021D7BC /* Views */,
 				F5E9716C2B4FEBD400B27F42 /* FeedViewController.swift */,
 				F5E9716E2B4FEBDD00B27F42 /* FeedPresenter.swift */,
@@ -178,10 +183,19 @@
 			path = FeedModule;
 			sourceTree = "<group>";
 		};
+		F5EEFB632B5FAD6A00F12878 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F5EEFB642B5FAD7200F12878 /* StarRatingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F5F0026E2B59243800C57DD2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				F5F0026F2B59244200C57DD2 /* BookData.swift */,
+				F5EEFB662B5FB11600F12878 /* MockUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -272,7 +286,9 @@
 				F5F002702B59244200C57DD2 /* BookData.swift in Sources */,
 				F5E971752B4FEBF500B27F42 /* FeedRouter.swift in Sources */,
 				F5E9716F2B4FEBDD00B27F42 /* FeedPresenter.swift in Sources */,
+				F5EEFB652B5FAD7200F12878 /* StarRatingView.swift in Sources */,
 				F5CB24D32B57EB5800949538 /* HeaderUIView.swift in Sources */,
+				F5EEFB672B5FB11600F12878 /* MockUser.swift in Sources */,
 				F57CF6E22B4EC4610056FBF0 /* ProfileRouter.swift in Sources */,
 				F57CF70E2B4EC9780056FBF0 /* ProfileInteractor.swift in Sources */,
 				F5639D932B5A6BF7007B1422 /* BookInfoViewController.swift in Sources */,
