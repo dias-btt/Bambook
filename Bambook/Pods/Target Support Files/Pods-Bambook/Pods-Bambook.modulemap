@@ -1,0 +1,6 @@
+framework module Pods_Bambook {
+  umbrella header "Pods-Bambook-umbrella.h"
+
+  export *
+  module * { export * }
+}
